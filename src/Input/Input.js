@@ -1,11 +1,10 @@
 import React from 'react';
-import InputType from './InputType.js';
-import InputDescription from './InputDescription.js';
+import InputType from './InputType';
+import InputDescription from './InputDescription';
 
-class Input extends React.Component {
+function Input() {
 
 
-    render() {
         return(
             <div>
                 <h1>Input</h1>
@@ -13,7 +12,6 @@ class Input extends React.Component {
                 <InputDescription/>
             </div>
         );
-    }
 }
 
 export default Input
