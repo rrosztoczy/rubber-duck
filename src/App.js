@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Input from './Input/Input'
+import Output from './Output/Output'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         </a>
       </header>
       <Input/>
+      <Output/>
     </div>
   );
 }

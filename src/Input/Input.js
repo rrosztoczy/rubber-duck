@@ -1,6 +1,6 @@
 import React from 'react';
-import InputType from './InputType.js';
-import InputDescription from './InputDescription.js';
+import InputType from './InputType';
+import InputDescription from './InputDescription';
 
 class Input extends React.Component {
 
