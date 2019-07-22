@@ -1,15 +1,16 @@
 import React from 'react';
-import Input from './Input/Input'
-import Output from './Output/Output'
+import IOContainer from './IOContainer'
 
 function App() {
+
+
+
   return (
     <div className="App">
       <header className="App-header">
         Welcome to Rubber Duck
       </header>
-      <Input/>
-      <Output/>
+      <IOContainer/>
     </div>
   );
 }
