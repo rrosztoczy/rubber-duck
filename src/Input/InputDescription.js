@@ -1,15 +1,9 @@
 import React, { useState } from 'react'
 import { Form } from 'semantic-ui-react'
 
-function InputDescription() {
+function InputDescription(props) {
 
-    const options = [
-        { key: 'u', text: 'Unsure', value: 'unsure' },
-        { key: 'm', text: 'Male', value: 'male' },
-        { key: 'f', text: 'Female', value: 'female' },
-        { key: 'o', text: 'Other', value: 'other' },
-      ];
-    const [goal, setGoal] = useState(options[0].text);  
+    const [goal, setGoal] = useState(props.options[0].text);  
     const [goalSummary, setGoalSummary] = useState("");  
     const [goalDescription, setGoalDescription] = useState("");  
 
@@ -19,8 +13,8 @@ function InputDescription() {
 
 
     return (
-            <Form>
-              <Form.Select value={goal} onChange={e => setGoal(e.target.innerText)}  options={options} fluid label='Current Goal' placeholder='Select Goal'/>
+            <Form onSubmit={e => props.handleSubmit(e)}>
+              <Form.Select value={goal} onChange={e => setGoal(e.target.innerText)}  options={props.options} fluid label='Current Goal' placeholder='Select Goal'/>
               <Form.Input value={goalSummary} onChange={e => setGoalSummary(e.target.value)}  fluid label='Specifically, what are you trying to accomplish?' placeholder='I want to...' />
               <Form.TextArea value={goalDescription} onChange={e => setGoalDescription(e.target.value)} label='Description' />
               <Form.Button>Submit</Form.Button>
