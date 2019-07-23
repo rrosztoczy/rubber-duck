@@ -1,6 +1,7 @@
 import React from 'react';
 import InputType from './InputType';
 import InputDescription from './InputDescription';
+import { tsPropertySignature } from '@babel/types';
 
 function Input(props) {
 
@@ -9,7 +10,7 @@ function Input(props) {
             <div>
                 <h1>Input</h1>
                 <InputType/>
-                <InputDescription options={props.options} handleSubmit={props.handleSubmit}/>
+                <InputDescription handleSubmit={props.handleSubmit}/>
             </div>
         );
 }

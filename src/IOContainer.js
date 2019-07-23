@@ -2,31 +2,42 @@ import React, { useState } from 'react'
 import Input from './Input/Input'
 import Output from './Output/Output'
 
-function IOContainer(props) {
+const inputUrl = 'http://localhost:3000/inputs'
 
-    const [goalType, setGoalType] = useState("")
-    const [goalSummary, setGoalSummary] = useState("")
-    const [goalDescription, setGoalDescription] = useState("")
-  
-    const handleSubmit = (e) => {
-      e.preventDefault()
-      console.log(e.target)
-      console.log("goal type", goalType)
-      console.log("goal summary", goalSummary)
-      console.log("goal description", goalDescription)
-    //   Now, set state for each of these based on the form children
+function IOContainer() {
+
+  const createInput = async (url, { goalType, goalSummary, goalDescription }) => {
+    const postHeader = { 
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    } 
+
+    const postBody = {
+      "goalType": goalType,
+      "goalSummary": goalSummary,
+      "goalDescription": goalDescription
     }
 
-    const options = [
-        { key: 'u', text: 'Unsure', value: 'unsure' },
-        { key: 'm', text: 'Male', value: 'male' },
-        { key: 'f', text: 'Female', value: 'female' },
-        { key: 'o', text: 'Other', value: 'other' },
-      ];
+    const postObj = {
+      method: "POST",
+      headers: postHeader,
+      body: JSON.stringify(postBody)
+    }
+    const response = await fetch(url, postObj)
+    const jsonResponse = await response.json()
+    console.log(jsonResponse)
+  }
+
+
+
+  const handleSubmit = (e, state) => {
+    e.preventDefault()
+    createInput(inputUrl, state)
+  }
 
     return(
         <>
-            <Input options={options} handleSubmit={handleSubmit}/>
+            <Input handleSubmit={handleSubmit}/>
             <Output/>
         </>
     )
