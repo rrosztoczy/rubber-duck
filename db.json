@@ -1,0 +1,46 @@
+{
+  "inputs": [
+    {
+      "id": "1",
+      "goalType": "Female",
+      "goalSummary": "testonesummary",
+      "goalDescription": "testonedescription"
+    },
+    {
+      "goalType": "Male",
+      "goalSummary": "testotwosummary",
+      "goalDescription": "testtwodescription",
+      "id": "2"
+    },
+    {
+      "goalType": "Other",
+      "goalSummary": "testothreesummary",
+      "goalDescription": "testthreedescription",
+      "id": "3"
+    },
+    {
+      "goalType": "Male",
+      "goalSummary": "testofoursummary",
+      "goalDescription": "testfourdescription",
+      "id": "4"
+    },
+    {
+      "goalType": "Female",
+      "goalSummary": "test5",
+      "goalDescription": "test5des",
+      "id": "2KqTG77"
+    },
+    {
+      "goalType": "Female",
+      "goalSummary": "adafd",
+      "goalDescription": "dafda",
+      "id": "jrlrSNQ"
+    },
+    {
+      "goalType": "Other",
+      "goalSummary": "xx",
+      "goalDescription": "dfsafdx",
+      "id": "5womepK"
+    }
+  ]
+}

@@ -1,15 +1,16 @@
 import React from 'react';
 import InputType from './InputType';
 import InputDescription from './InputDescription';
+import { tsPropertySignature } from '@babel/types';
 
-function Input() {
+function Input(props) {
 
 
         return(
             <div>
                 <h1>Input</h1>
                 <InputType/>
-                <InputDescription/>
+                <InputDescription handleSubmit={props.handleSubmit}/>
             </div>
         );
 }
